@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {margin: 0; padding: 0;}
+      canvas{border: 2px solid black; margin-top:50px; margin-left: 350px;}
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+    <script>
+      let firebaseConfig = {
+        apiKey: "AIzaSyDg6kX9VGNIgO0Vh5u24ik6RIZQE_vvGKw",
+        authDomain: "virtual-pet-a520f.firebaseapp.com",
+        databaseURL: "https://virtual-pet-a520f.firebaseio.com",
+        projectId: "virtual-pet-a520f",
+        storageBucket: "virtual-pet-a520f.appspot.com",
+        messagingSenderId: "451260848296",
+        appId: "1:451260848296:web:5cf7332bf9a8fbc8a58a9d"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src = "Libraries/p5.min.js"></script>
+    <script src = "Libraries/p5.dom.min.js"></script>
+    <script src = "Libraries/p5.sound.min.js"></script>
+    <script src = "Libraries/p5.play.js"></script>
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+  </body>
+</html>
