@@ -14,7 +14,7 @@ function setup() {
   });
   stateR = database.ref('Timer');
   stateR.on('value', function (data) {
-    Timer = data.val();
+    timer = data.val();
   })
   createCanvas(800, 700);
   dog = createSprite(400, 350, 10, 10);
@@ -36,11 +36,11 @@ function draw() {
     dog.changeImage('Regular');
     dogState = "Regular";
   }
-  database.ref('/').update({'Timer' : timer});
   if (keyCode === UP_ARROW && foodStockL > 0 && dogState === "Regular") {
     foodStockL -= 1;
     timer = 3600;
     database.ref('/').update({'Food' : foodStockL});
+    database.ref('/').update({'Timer' : timer});
   }
   background(255);
   text("Food : " + foodStockL, 0, 20);
@@ -49,6 +49,3 @@ function draw() {
   }
   drawSprites();
 }
-
-
-
